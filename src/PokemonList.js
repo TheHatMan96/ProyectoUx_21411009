@@ -60,27 +60,27 @@ const tileData = [
      {
        img: "https://vignette.wikia.nocookie.net/pokemonreloaded/images/7/77/Pikachu.png/revision/latest?cb=20150923201800&path-prefix=es",
        title: 'Pikachu',
-       author: 'author',
+       Type: 'Electric',
      },
      {
       img: "https://vignette.wikia.nocookie.net/pokemonreloaded/images/b/be/Venusaur.png/revision/latest?cb=20150827203729&path-prefix=es",
       title: 'Venusaur',
-      author: 'author',
+      Type: 'Grass',
      },
      {
       img: "https://vignette.wikia.nocookie.net/pokemonreloaded/images/9/95/Charizard.png/revision/latest/scale-to-width-down/150?cb=20180905193617&path-prefix=es",
       title: 'Charizard',
-      author: 'author',
+      Type: 'Fire',
      },
      {
       img: "https://vignette.wikia.nocookie.net/pokemonreloaded/images/4/41/Blastoise.png/revision/latest/scale-to-width-down/150?cb=20180729224709&path-prefix=es",
       title: 'Blastoise',
-      author: 'author',
+      Type: 'Water',
      },
      {
       img: "https://vignette.wikia.nocookie.net/pokemonreloaded/images/b/bf/Machamp.png/revision/latest?cb=20150617171205&path-prefix=es",
-      title: 'Image',
-      author: 'author',
+      title: 'Machamp',
+      Type: 'Fighting',
      },
   ];
 class PokemonList extends Component {
@@ -247,8 +247,8 @@ class PokemonList extends Component {
       </div>
       <h1> </h1>
               <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList}>
-        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+      <GridList style={{ backgroundColor:'#fffff' }} cellHeight={180} className={classes.gridList}>
+        <GridListTile key="Subheader" cols={2} style={{ height: 'auto', backgroundColor:'#fffff' }}>
             <Card>
               <CardContent>
                 <Typography>
@@ -262,7 +262,7 @@ class PokemonList extends Component {
             <img src={tile.img} alt={tile.title} />
             <GridListTileBar
               title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
+              subtitle={<span>Type: {tile.Type}</span>}
               actionIcon={
                 <IconButton className={classes.icon}>
                   <InfoIcon />
